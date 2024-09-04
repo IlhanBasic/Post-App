@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novi post</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        section {
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        textarea {
+            resize: vertical;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            display: block;
+            margin: 20px auto 0;
+            width: 100%;
+            max-width: 150px;
+            text-align: center;
+        }
+        button a {
+            color: white;
+            text-decoration: none;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Novi post</h1>
+    <form method="post" action="/posts">
+        <section>
+            <label for="author">Autor</label><br>
+            <input type="text" name="author" id="author">
+        </section>
+        <section>
+            <label for="title">Naslov</label><br>
+            <input type="text" name="title" id="title">
+        </section>
+        <section>
+            <label for="text"></label><br>
+            <textarea name="text" id="text" rows="15" cols="150"></textarea>
+        </section>
+        <button>Potvrdi</button>
+    </form>
+    <button><a href="/posts" style="text-decoration: none;">Odustani</a></button>
+</body>
+</html>
